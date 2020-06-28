@@ -1,0 +1,27 @@
+
+note over browser:
+User clicks on save button
+end note 
+
+browser->server:Browser makes a post request to "https://fullstack-exampleapp.herokuapp.com/new_note" with the data entered in the ne form field
+server->browser:Server sends a http redirect response with a 302 code to the location /notes 
+
+browser->server:Browser makes a fresh GET request to the url " https://fullstack-exampleapp.herokuapp.com/notes"
+server->browser:Server sends the html code to the browser
+
+browser->server:Browser makes a request for the "/main.css"
+server->browser:main.css
+
+browser->server:Browser requests "main.js" from the server
+server->browser:main.js
+
+note over browser:
+main.js starts executing in the the browser and requests for data.json
+end note 
+
+browser->server:Browser makes a get request to the url "https://fullstack-exampleapp.herokuapp.com/data.json" for data.json
+server->browser: server sends the data json
+
+note over browser:
+xhttp event handler renders the data.json as a list on the browser
+

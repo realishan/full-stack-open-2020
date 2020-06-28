@@ -1,0 +1,13 @@
+browser->server:
+note over browser:
+user makes a new note and clicks on the submit button
+
+event handler triggered
+
+the note gets locally added to the array
+
+
+end note over 
+
+browser->server: browser makes a POST request to "https://fullstack-exampleapp.herokuapp.com/new_note_spa" with  the form content and timestand as request payload
+server->browser: browser responds with a sucess message  {"message":"note created"}

@@ -1,0 +1,18 @@
+browser->server: server makes a get request to the url "https://fullstack-exampleapp.herokuapp.com/spa"
+server->browser: server sends SPA html page as a response
+
+browser->server:browser requests for main.css
+server->browser:main.css
+
+browser->server:browser requests for spa.js from the server
+server->browser:spa.js
+
+note over browser:
+spa.js starts executing
+end note
+browser->server:server requests for data.json from the server
+server->browser:data.json
+
+note over browser:
+
+the event handler renders data.json as a list on the browser
